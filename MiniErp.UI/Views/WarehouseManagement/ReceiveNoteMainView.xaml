@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="MiniErp.UI.Views.WarehouseManagement.ReceiveNoteMainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MiniErp.UI.Utils"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Mã NCC">
+                <ComboBox ItemsSource="{Binding ProviderList}"
+                        SelectedItem="{Binding Provider}"
+                        IsSynchronizedWithCurrentItem="True">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Code}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </GroupBox>
+            <GroupBox Header="Tên NCC" Grid.Row="1">
+                <TextBox IsReadOnly="True" Text="{Binding Provider.Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Địa chỉ" Grid.Row="2">
+                <TextBox IsReadOnly="True" Text="{Binding Provider.Address, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Số phiếu" Grid.Column="1">
+                <TextBox Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Ngày nhập" Grid.Column="1" Grid.Row="1">
+                <DatePicker SelectedDate="{Binding Date, TargetNullValue={x:Static sys:DateTime.Now}, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></DatePicker>
+            </GroupBox>
+            <GroupBox Header="Số đơn hàng" Grid.Column="1" Grid.Row="2">
+                <TextBox Text="{Binding OrderCode}"></TextBox>
+            </GroupBox>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Tải dữ liệu" Command="{Binding LoadCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="Thêm" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="Sửa" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="Xóa" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="In" Command="{Binding PrintCommand}" Width="100px" Margin="5,5,5,5"/>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" >
+            <ListView Margin="5" ItemsSource="{Binding List, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                     >
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="STT" DisplayMemberBinding="{Binding RelativeSource={RelativeSource FindAncestor, 
+                                         AncestorType={x:Type ListViewItem}}, 
+                                         Converter={StaticResource IndexConverter}}"/>
+                        <GridViewColumn Header="Số phiếu" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="Ngày nhập" DisplayMemberBinding="{Binding Date, StringFormat='dd/MM/yyyy'}"/>
+                        <GridViewColumn Header="Số đơn hàng" DisplayMemberBinding="{Binding OrderCode}" />
+                        <GridViewColumn Header="Nhà cung cấp" DisplayMemberBinding="{Binding ProviderName}"/>
+                        <GridViewColumn Header="Tổng tiền" DisplayMemberBinding="{Binding Total}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

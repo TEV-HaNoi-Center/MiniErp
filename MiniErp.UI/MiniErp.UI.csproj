@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\back_groud.png" />
+    <None Remove="Resources\bacterium.png" />
+    <None Remove="Resources\category-alt.png" />
+    <None Remove="Resources\Customer.png" />
+    <None Remove="Resources\employee-man.png" />
+    <None Remove="Resources\fingerprint.png" />
+    <None Remove="Resources\house-window.png" />
+    <None Remove="Resources\inputInventory.png" />
+    <None Remove="Resources\inventory-alt.png" />
+    <None Remove="Resources\key-icon.png" />
+    <None Remove="Resources\options.png" />
+
+    <None Remove="Resources\outputInventory.png" />
+    <None Remove="Resources\Product.png" />
+    <None Remove="Resources\TevLogo.png" />
+    <None Remove="Resources\usd-circle.png" />
+    <None Remove="Resources\user-gear.png" />
+    <None Remove="Resources\user-icon.png" />
+
+    <None Remove="Views\Images\++_logo_red %284%29.png" />
+    <None Remove="Views\Images\back_groud.png" />
+    <None Remove="Views\Images\en-flag.png" />
+    <None Remove="Views\Images\key-icon.png" />
+    <None Remove="Views\Images\user-icon.png" />
+    <None Remove="Views\Images\vn-flag.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.77" />
+    <PackageReference Include="NPOI" Version="2.7.0" />
+    <PackageReference Include="PasswordBoxMVVM" Version="1.0.5" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.19" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.19" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiniErp.DataAccess\MiniErp.DataAccess.csproj" />
+    <ProjectReference Include="..\MiniErp.EFCore\MiniErp.EFCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\back_groud.png" />
+    <Resource Include="Resources\key-icon.png" />
+    <Resource Include="Resources\TevLogo.png" />
+    <Resource Include="Resources\bacterium.png" />
+    <Resource Include="Resources\category-alt.png" />
+    <Resource Include="Resources\Customer.png" />
+    <Resource Include="Resources\employee-man.png" />
+    <Resource Include="Resources\fingerprint.png" />
+    <Resource Include="Resources\house-window.png" />
+    <Resource Include="Resources\inputInventory.png" />
+    <Resource Include="Resources\inventory-alt.png" />
+    <Resource Include="Resources\options.png" />
+    <Resource Include="Resources\outputInventory.png" />
+    <Resource Include="Resources\Product.png" />
+    <Resource Include="Resources\usd-circle.png" />
+    <Resource Include="Resources\user-gear.png" />
+    <Resource Include="Resources\user-icon.png" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Category\UnitView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\PhieuXuatKho.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reports\PhieuNhapKho.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="MiniErp.UI.Views.WarehouseManagement.DeliveryNoteView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MiniErp.UI.Views.WarehouseManagement"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Mã khách hàng">
+                <ComboBox ItemsSource="{Binding ListCustomer}"
+            SelectedItem="{Binding Customer}"
+            IsSynchronizedWithCurrentItem="True">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Code}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </GroupBox>
+            <GroupBox Header="Tên khách hàng" Grid.Row="1">
+                <TextBox IsReadOnly="True" Text="{Binding Customer.Name}"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Địa chỉ" Grid.Row="2">
+                <TextBox IsReadOnly="True" Text="{Binding Customer.Address}"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Số đơn hàng" Grid.Column="1">
+                <TextBox Text="{Binding OrderCode, TargetNullValue='', UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Ngày xuất" Grid.Column="1" Grid.Row="1">
+                <DatePicker SelectedDate="{Binding Date, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></DatePicker>
+            </GroupBox>
+            <GroupBox Header="Số phiếu" Grid.Column="1" Grid.Row="2">
+                <TextBox IsReadOnly="True" Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+            </GroupBox>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Thêm sản phẩm" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="Xóa sản phẩm" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="Lưu" Command="{Binding SaveCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="Hủy" Command="{Binding CancelCommand}" Width="100px" Margin="5,5,5,5"/>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" >
+            <ListView Margin="5" ItemsSource="{Binding Details, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Mã sản phẩm" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="Tên sản phẩm" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Số lượng" DisplayMemberBinding="{Binding Quantity}" />
+                        <GridViewColumn Header="Đơn giá" DisplayMemberBinding="{Binding Price}"/>
+                        <GridViewColumn Header="Thành tiền" DisplayMemberBinding="{Binding Total}" />
+                        <GridViewColumn Header="Loại tiền" DisplayMemberBinding="{Binding CurrencyCode}" />
+                        <GridViewColumn Header="Tỉ giá" DisplayMemberBinding="{Binding ExchangeRate}" />
+                        <GridViewColumn Header="Ghi chú" DisplayMemberBinding="{Binding Note}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
