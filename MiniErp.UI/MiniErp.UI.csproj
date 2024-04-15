@@ -7,15 +7,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
 	<UseWindowsForms>true</UseWindowsForms>
+	<Platforms>AnyCPU;ARM32;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\++_logo_red %282%29.png" />
     <None Remove="Resources\back_groud.png" />
     <None Remove="Resources\bacterium.png" />
     <None Remove="Resources\category-alt.png" />
     <None Remove="Resources\Customer.png" />
     <None Remove="Resources\employee-man.png" />
+    <None Remove="Resources\en-flag %281%29.png" />
     <None Remove="Resources\fingerprint.png" />
+    <None Remove="Resources\flag-south-korea.png" />
+    <None Remove="Resources\function-process.png" />
     <None Remove="Resources\house-window.png" />
     <None Remove="Resources\inputInventory.png" />
     <None Remove="Resources\inventory-alt.png" />
@@ -25,20 +30,16 @@
     <None Remove="Resources\outputInventory.png" />
     <None Remove="Resources\Product.png" />
     <None Remove="Resources\TevLogo.png" />
+    <None Remove="Resources\time-check.png" />
     <None Remove="Resources\usd-circle.png" />
     <None Remove="Resources\user-gear.png" />
     <None Remove="Resources\user-icon.png" />
-
-    <None Remove="Views\Images\++_logo_red %284%29.png" />
-    <None Remove="Views\Images\back_groud.png" />
-    <None Remove="Views\Images\en-flag.png" />
-    <None Remove="Views\Images\key-icon.png" />
-    <None Remove="Views\Images\user-icon.png" />
-    <None Remove="Views\Images\vn-flag.png" />
+    <None Remove="Resources\vn-flag %281%29 %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.77" />
@@ -56,7 +57,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\++_logo_red (2).png" />
     <Resource Include="Resources\back_groud.png" />
+    <Resource Include="Resources\en-flag (1).png" />
+    <Resource Include="Resources\flag-south-korea.png" />
+    <Resource Include="Resources\function-process.png" />
     <Resource Include="Resources\key-icon.png" />
     <Resource Include="Resources\TevLogo.png" />
     <Resource Include="Resources\bacterium.png" />
@@ -70,9 +75,11 @@
     <Resource Include="Resources\options.png" />
     <Resource Include="Resources\outputInventory.png" />
     <Resource Include="Resources\Product.png" />
+    <Resource Include="Resources\time-check.png" />
     <Resource Include="Resources\usd-circle.png" />
     <Resource Include="Resources\user-gear.png" />
     <Resource Include="Resources\user-icon.png" />
+    <Resource Include="Resources\vn-flag (1) (1).png" />
 
   </ItemGroup>
 

@@ -10,6 +10,7 @@ using MiniErp.UI.Stores;
 using MiniErp.UI.ViewModels;
 using MiniErp.UI.Views;
 using MiniErp.UI.Views.Category;
+using MiniErp.UI.Views.Users;
 using MiniErp.UI.Views.WarehouseManagement;
 using System;
 using System.Collections.Generic;
@@ -72,6 +73,9 @@ namespace MiniErp.UI.DependencyInjection
             services.AddScoped<UserViewModel>();
             services.AddScoped<TimeKeepingViewModel>();
             services.AddScoped<RegisterFingersprintViewModel>();
+            services.AddScoped<CheckOutView>();
+            services.AddScoped<CheckOutViewModel>();
+
 
             services.AddSingleton<NavigationStore>();
             services.AddSingleton<MainContentStore>();

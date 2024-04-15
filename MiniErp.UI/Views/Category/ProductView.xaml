@@ -49,9 +49,9 @@
             </GroupBox>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Thêm" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Sửa" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Xóa" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Add}" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Fix}" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Delete}" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
         </StackPanel>
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <ListView Margin="5" ItemsSource="{Binding List, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">

@@ -22,13 +22,16 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Grid.Column="0" Header="Tên tiền tệ">
+            <GroupBox Grid.Column="0"
+                      Header="{DynamicResource CurrencyName}">
                 <TextBox Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="1" Header="Mã tiền tệ">
+            <GroupBox Grid.Column="1"
+                      Header="{DynamicResource CurrencyCode}">
                 <TextBox Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="2" Header="Tỉ lệ quy đổi">
+            <GroupBox Grid.Column="2"
+                      Header="{DynamicResource ConversionRate}">
                 <TextBox Text="{Binding ExchangeRate, TargetNullValue='', UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ConverterParameter=#\,##0.00}">
                     <i:Interaction.Behaviors>
                         <local:TextBoxInputBehavior InputMode="DecimalInput"/>
@@ -37,9 +40,9 @@
             </GroupBox>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Thêm" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Sửa" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Xóa" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Add}" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Fix}" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Delete}" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
         </StackPanel>   
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <ListView Margin="5" ItemsSource="{Binding List, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
@@ -50,10 +53,10 @@
             </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
-                    <GridViewColumn Header="Mã tiền tệ" DisplayMemberBinding="{Binding Code}"/>
-                    <GridViewColumn Header="Tên tiền tệ" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Tỉ lệ quy đổi" DisplayMemberBinding="{Binding ExchangeRate}"></GridViewColumn>
+                        <GridViewColumn Header="{DynamicResource Id}" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="{DynamicResource CurrencyCode}" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="{DynamicResource CurrencyName}" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="{DynamicResource ConversionRate}" DisplayMemberBinding="{Binding ExchangeRate}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

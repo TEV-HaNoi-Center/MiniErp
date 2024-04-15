@@ -30,7 +30,13 @@ namespace MiniErp.UI.ViewModels
         public string ErrorMessage { get => _errorMessage; set { _errorMessage = value; OnPropertyChanged(); } }
         private readonly NavigationStore _navigationStore;
         private readonly IRepository<Domain.User> _repository;
-
+        public bool UserShouldEditValueNow
+        {
+            get
+            {
+                return true;
+            }
+        }
         public LoginViewModel(FirebaseAuthClient authClient, LoggedInUser user, NavigationStore navigationStore, IRepository<Domain.User> repository)
         {
             _authClient = authClient;

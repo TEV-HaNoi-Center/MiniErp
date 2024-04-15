@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <system:String x:Key="Category">품목</system:String>
+    <system:String x:Key="ExchangeRates">환율</system:String>
+    <system:String x:Key="Product">제품</system:String>
+    <system:String x:Key="Customer">고객</system:String>
+    <system:String x:Key="Provider">공급자</system:String>
+    <system:String x:Key="Unit">단위</system:String>
+
+    <system:String x:Key="InventoryManagement">물품 창고 관리</system:String>
+    <system:String x:Key="InventoryIn">입고</system:String>
+    <system:String x:Key="InventoryOut">출고</system:String>
+    <system:String x:Key="Inventory">재고</system:String>
+
+    <system:String x:Key="HRM">인사관리</system:String>
+    <system:String x:Key="Personnel">인사</system:String>
+    <system:String x:Key="Timekeeping">출퇴근 기록</system:String>
+
+    <system:String x:Key="Hello">안녕하세요,</system:String>
+    <system:String x:Key="Logout">로그아웃</system:String>
+    <system:String x:Key="Checkout">점검</system:String>
+    <system:String x:Key="Id">아이디</system:String>
+
+    <!--Checkout-->
+    <system:String x:Key="Fullname">이름</system:String>
+    <system:String x:Key="EmployeeCode">사번</system:String>
+    <system:String x:Key="WorkingParts">근무팀</system:String>
+    <system:String x:Key="WorkingDay">근무일</system:String>
+    <system:String x:Key="WorkingTime">근무시간</system:String>
+    <system:String x:Key="WorkContent">업무내용</system:String>
+    <system:String x:Key="ProjectName">프로젝트</system:String>
+    <system:String x:Key="Submit">출퇴근 기록</system:String>
+    <system:String x:Key="Option">옵션</system:String>
+    <system:String x:Key="Location">위치</system:String>
+
+    <!--CURD-->
+    <system:String x:Key="Add">추가</system:String>
+    <system:String x:Key="Fix">수정</system:String>
+    <system:String x:Key="Delete">삭제</system:String>
+
+    <!--Currency View-->
+    <system:String x:Key="CurrencyCode">통화 코드</system:String>
+    <system:String x:Key="CurrencyName">통화명</system:String>
+    <system:String x:Key="ConversionRate">전환율</system:String>
+
+</ResourceDictionary>

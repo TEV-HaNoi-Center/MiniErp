@@ -21,6 +21,7 @@ namespace MiniErp.UI.ViewModels
         private readonly MainContentStore _mainContentStore;
         private readonly FirebaseAuthClient _authClient;
         public ICommand UnitCommand { get; set; }
+        public ICommand CheckOutCommand { get; set; }
         public ICommand CurrencyCommand { get; set; }
         public ICommand ProviderCommand { get; set; }
         public ICommand CustomerCommand { get; set; }
@@ -50,18 +51,25 @@ namespace MiniErp.UI.ViewModels
             {
                 new LanguageModel
                 {
-                    Language = "Tiếng Việt",
+                    Language = "Vietnamese",
                     LanguageCode = "vi",
                     LanguageUri = new Uri("..\\Resources\\StringResources.vi.xaml", UriKind.Relative),
-                    Icon = "/MiniErp.UI;component/Views/Images/vn-flag.png"
+                    Icon = "..\\Resources\\vn-flag (1) (1).png"
                 },
                 new LanguageModel
                 {
                     Language = "English",
                     LanguageCode = "en",
                     LanguageUri = new Uri("..\\Resources\\StringResources.en.xaml", UriKind.Relative),
-                    Icon = "/MiniErp.UI;component/Views/Images/en-flag.png"
+                    Icon = "..\\Resources\\en-flag (1).png"
                 },
+                new LanguageModel
+                {
+                    Language = "Korean",
+                    LanguageCode = "ko",
+                    LanguageUri = new Uri("..\\Resources\\StringResources.ko.xaml", UriKind.Relative),
+                    Icon = "..\\Resources\\flag-south-korea.png"
+                }
             };
 
             UnitCommand = new RelayCommand<object>(p => CurrentUser.IsAdmin, p =>
@@ -112,7 +120,10 @@ namespace MiniErp.UI.ViewModels
                 _navigationStore.CurrentViewModel = IoC.Resolve<LoginViewModel>();
                 _mainContentStore.CurrentViewModel = null;
             });
-
+            CheckOutCommand = new RelayCommand<object>(p => true, p =>
+            {
+                _mainContentStore.CurrentViewModel = IoC.Resolve<CheckOutViewModel>();
+            });
             InventoryCommand = new RelayCommand<object>(p => true, p =>
             {
                 _mainContentStore.CurrentViewModel = IoC.Resolve<InventoryViewModel>();
@@ -149,6 +160,9 @@ namespace MiniErp.UI.ViewModels
                     break;
                 case "en":
                     resourceDictionary.Source = new Uri("..\\Resources\\StringResources.en.xaml", UriKind.Relative);
+                    break;
+                case "ko":
+                    resourceDictionary.Source = new Uri("..\\Resources\\StringResources.ko.xaml", UriKind.Relative);
                     break;
                 default:
                     resourceDictionary.Source = new Uri("..\\Resources\\StringResources.vi.xaml", UriKind.Relative);

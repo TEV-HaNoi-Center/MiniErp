@@ -57,8 +57,8 @@
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Tải dữ liệu" Command="{Binding LoadCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Sửa" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Xóa" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Fix}" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Delete}" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" >
             <ListView Margin="5" ItemsSource="{Binding List, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"

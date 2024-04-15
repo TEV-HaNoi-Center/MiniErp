@@ -3,4 +3,45 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <system:String x:Key="Category">Category</system:String>
     <system:String x:Key="ExchangeRates">Exchange rates</system:String>
+    <system:String x:Key="Product">Product</system:String>
+    <system:String x:Key="Customer">Customer</system:String>
+    <system:String x:Key="Provider">Provider</system:String>
+    <system:String x:Key="Unit">Unit</system:String>
+
+    <system:String x:Key="InventoryManagement">Inventory Management</system:String>
+    <system:String x:Key="InventoryIn">Inventory In</system:String>
+    <system:String x:Key="InventoryOut">Inventory Out</system:String>
+    <system:String x:Key="Inventory">Inventory</system:String>
+
+    <system:String x:Key="HRM">HRM</system:String>
+    <system:String x:Key="Personnel">Personnel</system:String>
+    <system:String x:Key="Timekeeping">Timekeeping</system:String>
+
+    <system:String x:Key="Hello">Hello, </system:String>
+    <system:String x:Key="Logout">Logout</system:String>
+    <system:String x:Key="Checkout">Checkout</system:String>
+    <system:String x:Key="Id">Id</system:String>
+    
+    <!--Checkout-->
+    <system:String x:Key="Fullname">Fullname</system:String>
+    <system:String x:Key="EmployeeCode">Employee Code</system:String>
+    <system:String x:Key="WorkingParts">Working Parts</system:String>
+    <system:String x:Key="WorkingDay">Working Day</system:String>
+    <system:String x:Key="WorkingTime">Working Time</system:String>
+    <system:String x:Key="WorkContent">Work Content</system:String>
+    <system:String x:Key="ProjectName">Project Name</system:String>
+    <system:String x:Key="Submit">Submit</system:String>
+    <system:String x:Key="Option">Option</system:String>
+    <system:String x:Key="Location">Location</system:String>
+
+    <!--CURD-->
+    <system:String x:Key="Add">Add</system:String>
+    <system:String x:Key="Fix">Fix</system:String>
+    <system:String x:Key="Delete">Delete</system:String>
+    
+    <!--Currency View-->
+    <system:String x:Key="CurrencyCode">Currency Code</system:String>
+    <system:String x:Key="CurrencyName">Currency Name</system:String>
+    <system:String x:Key="ConversionRate">Conversion Rate</system:String>
+
 </ResourceDictionary>

@@ -3,4 +3,44 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <system:String x:Key="Category">Danh mục</system:String>
     <system:String x:Key="ExchangeRates">Tỉ giá</system:String>
+    <system:String x:Key="Product">Sản phẩm</system:String>
+    <system:String x:Key="Customer">Khách hàng</system:String>
+    <system:String x:Key="Provider">Nhà cung cấp</system:String>
+    <system:String x:Key="Unit">Đơn vị tính</system:String>
+    
+    <system:String x:Key="InventoryManagement">Quản lý kho</system:String>
+    <system:String x:Key="InventoryIn">Nhập kho</system:String>
+    <system:String x:Key="InventoryOut">Xuất kho</system:String>
+    <system:String x:Key="Inventory">Tồn kho</system:String>
+
+    <system:String x:Key="HRM">Quản lý nhân sự</system:String>
+    <system:String x:Key="Personnel">Nhân sự</system:String>
+    <system:String x:Key="Timekeeping">Chấm công</system:String>
+
+    <system:String x:Key="Hello">Xin chào, </system:String>
+    <system:String x:Key="Logout">Đăng xuất</system:String>
+    <system:String x:Key="Checkout">Chấm công link</system:String>
+    <system:String x:Key="Id">Id</system:String>
+
+    <!--Checkout-->
+    <system:String x:Key="Fullname">Họ tên</system:String>
+    <system:String x:Key="EmployeeCode">Mã nhân viên</system:String>
+    <system:String x:Key="WorkingParts">Bộ phận làm việc</system:String>
+    <system:String x:Key="WorkingDay">Ngày làm việc</system:String>
+    <system:String x:Key="WorkingTime">Thời gian làm việc</system:String>
+    <system:String x:Key="WorkContent">Nội dung công việc</system:String>
+    <system:String x:Key="ProjectName">Tên dự án</system:String>
+    <system:String x:Key="Submit">Tiến hành chấm công</system:String>
+    <system:String x:Key="Option">Tùy chọn</system:String>
+    <system:String x:Key="Location">Vị trí</system:String>
+    
+    <!--CURD-->
+    <system:String x:Key="Add">Thêm</system:String>
+    <system:String x:Key="Fix">Sửa</system:String>
+    <system:String x:Key="Delete">Xóa</system:String>
+
+    <!--Currency View-->
+    <system:String x:Key="CurrencyCode">Mã tiền tệ</system:String>
+    <system:String x:Key="CurrencyName">Tên tiền tệ</system:String>
+    <system:String x:Key="ConversionRate">Tỉ lệ quy đổi</system:String>
 </ResourceDictionary>
