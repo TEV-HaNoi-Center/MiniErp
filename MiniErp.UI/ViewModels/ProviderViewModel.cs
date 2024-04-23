@@ -17,8 +17,8 @@ namespace MiniErp.UI.ViewModels
     {
         private ObservableCollection<Provider> _list = new ObservableCollection<Provider>();
         public ObservableCollection<Provider> List { get => _list; set { _list = value; OnPropertyChanged(); } }
-        private Customer _SelectedItem;
-        public Customer SelectedItem
+        private Provider _SelectedItem;
+        public Provider SelectedItem
         {
             get => _SelectedItem;
             set

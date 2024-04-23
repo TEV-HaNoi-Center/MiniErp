@@ -25,7 +25,7 @@ namespace MiniErp.UI.ViewModels
         private string _Name = "";
         private string _IdNumber = "TEV";
         private string _Team = "Vĩnh Phúc";
-        private string _Date = DateTime.Now.ToString(DateFormat);
+        private string _Date = DateTime.Now.ToString(DateFormat, new CultureInfo("vi-VN"));
         private string _Time = "08:00 ~ 17:00";
         private string _Description = "Nội dung công việc";
         private string _BackupFolder = @"D:\Checkout";
