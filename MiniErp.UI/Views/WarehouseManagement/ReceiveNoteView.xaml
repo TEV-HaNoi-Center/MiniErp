@@ -72,7 +72,7 @@
                         <GridViewColumn Header="Đơn giá" DisplayMemberBinding="{Binding Price}"/>
                         <GridViewColumn Header="Thành tiền" DisplayMemberBinding="{Binding Total}" />
                         <GridViewColumn Header="Loại tiền" DisplayMemberBinding="{Binding CurrencyCode}" />
-                        <GridViewColumn Header="Tỉ giá" DisplayMemberBinding="{Binding ExchangeRate}" />
+                        <GridViewColumn Header="Tỷ giá" DisplayMemberBinding="{Binding ExchangeRate}" />
                         <GridViewColumn Header="Ghi chú" DisplayMemberBinding="{Binding Note}" />
                     </GridView>
                 </ListView.View>

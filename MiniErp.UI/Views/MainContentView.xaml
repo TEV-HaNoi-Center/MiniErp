@@ -64,15 +64,15 @@
                 </TreeViewItem>
                 <TreeViewItem IsExpanded="True">
                     <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding ProductCommand}"
+                        <Button Command="{Binding UnitCommand}"
+                                Background="Transparent"
                                 BorderThickness="0">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/Product.png"
+                                <Image Source="../Resources/bacterium.png"
                                        Height="16"
                                        Width="16"
                                        Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Product}" />
+                                <TextBlock Text="{DynamicResource Unit}" />
                             </StackPanel>
                         </Button>
                     </TreeViewItem.Header>
@@ -109,15 +109,15 @@
                 </TreeViewItem>
                 <TreeViewItem IsExpanded="True">
                     <TreeViewItem.Header>
-                        <Button Command="{Binding UnitCommand}"
-                                Background="Transparent"
+                        <Button Background="Transparent"
+                                Command="{Binding ProductCommand}"
                                 BorderThickness="0">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/bacterium.png"
+                                <Image Source="../Resources/Product.png"
                                        Height="16"
                                        Width="16"
                                        Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Unit}" />
+                                <TextBlock Text="{DynamicResource Product}" />
                             </StackPanel>
                         </Button>
                     </TreeViewItem.Header>

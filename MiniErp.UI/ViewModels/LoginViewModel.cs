@@ -17,9 +17,9 @@ namespace MiniErp.UI.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private string _email = "";
+        private string _email = "huyngu20@gmail.com";
         public string Email { get => _email; set { _email = value; OnPropertyChanged(); } }
-        private string _password;
+        private string _password = "111111";
         public string Password { get => _password; set { _password = value; OnPropertyChanged(); } }
         public ICommand SubmitCommand { get; set; }
         public ICommand PasswordResetCommand { get; set; }

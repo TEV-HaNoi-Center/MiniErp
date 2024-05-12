@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MiniErp.UI.ViewModels
@@ -119,21 +120,24 @@ namespace MiniErp.UI.ViewModels
 
             }, async (p) =>
             {
+
                 if (!_repository.AsQueryable().Any(x => x.Id == SelectedItem.Id))
                     return;
-
-                await _unitOfWork.BeginTransactionAsync();
-                try
+                if (System.Windows.MessageBox.Show("Bạn có chắc chắn muốn xóa người dùng?", "Xác nhận xóa", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    var currency = await _repository.AsQueryable().FirstOrDefaultAsync(x => x.Id == SelectedItem.Id);
-                    currency.IsDelete = true;
-                    await _repository.UpdateAsync(currency);
-                    await _unitOfWork.CommitAsync();
-                    LoadData();
-                }
-                catch (Exception ex)
-                {
-                    await _unitOfWork.RollbackAsync();
+                    await _unitOfWork.BeginTransactionAsync();
+                    try
+                    {
+                        var currency = await _repository.AsQueryable().FirstOrDefaultAsync(x => x.Id == SelectedItem.Id);
+                        currency.IsDelete = true;
+                        await _repository.UpdateAsync(currency);
+                        await _unitOfWork.CommitAsync();
+                        LoadData();
+                    }
+                    catch (Exception ex)
+                    {
+                        await _unitOfWork.RollbackAsync();
+                    }
                 }
             });
         }

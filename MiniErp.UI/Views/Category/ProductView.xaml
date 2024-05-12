@@ -31,7 +31,7 @@
             <GroupBox Grid.Column="1" Grid.Row="0" Header="Mã sản phẩm">
                 <TextBox Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="2" Grid.Row="0" Header="Đơn vị đo">
+            <GroupBox Grid.Column="2" Grid.Row="0" Header="Đơn vị tính">
                 <ComboBox ItemsSource="{Binding ListUnit}"
                         SelectedItem="{Binding Unit}"
                         IsSynchronizedWithCurrentItem="True">
@@ -65,7 +65,7 @@
                         <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
                         <GridViewColumn Header="Mã sản phẩm" DisplayMemberBinding="{Binding Code}"/>
                         <GridViewColumn Header="Tên Sản phẩm" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="Đơn vị đo" DisplayMemberBinding="{Binding Unit.Name}"/>
+                        <GridViewColumn Header="Đơn vị tính" DisplayMemberBinding="{Binding Unit.Name}"/>
                         <GridViewColumn Header="Mô tả" DisplayMemberBinding="{Binding Description}"/>
                     </GridView>
                 </ListView.View>

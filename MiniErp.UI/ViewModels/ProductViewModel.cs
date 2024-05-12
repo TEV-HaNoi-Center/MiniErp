@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MiniErp.UI.ViewModels
@@ -48,15 +49,23 @@ namespace MiniErp.UI.ViewModels
         public ICommand AddCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
-        private IRepository<Product> _repository;
-        private IRepository<Unit> _unitRepository;
-        private IUnitOfWork _unitOfWork;
+        private readonly IRepository<Product> _repository;
+        private readonly IRepository<ReceiveNoteDetail> _receiveRepository;
+        private readonly IRepository<DeliveryNoteDetail> _deliveryRepository;
+        private readonly IRepository<Unit> _unitRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductViewModel(IRepository<Product> repository, IRepository<Unit> unitRepository, IUnitOfWork unitOfWork)
+        public ProductViewModel(IRepository<Product> repository,
+            IRepository<Unit> unitRepository,
+            IRepository<DeliveryNoteDetail> deliveryNoteRepository,
+            IRepository<ReceiveNoteDetail> receiveNoteRepository,
+            IUnitOfWork unitOfWork)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
             _unitRepository = unitRepository;
+            _receiveRepository = receiveNoteRepository;
+            _deliveryRepository = deliveryNoteRepository;
 
 
             LoadData();
@@ -130,6 +139,14 @@ namespace MiniErp.UI.ViewModels
             {
                 if (!_repository.AsQueryable().Any(x => x.Id == SelectedItem.Id))
                     return;
+                var input = await _receiveRepository.AsQueryable().Where(x => x.ProductId == SelectedItem.Id).SumAsync(x => x.Quantity);
+                var output = await _deliveryRepository.AsQueryable().Where(x => x.ProductId == SelectedItem.Id).SumAsync(x => x.Quantity);
+                if (input - output > 0)
+                {
+                    System.Windows.MessageBox.Show("Sản phầm vẫn còn tồn kho!", "Thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
 
                 await _unitOfWork.BeginTransactionAsync();
                 try
