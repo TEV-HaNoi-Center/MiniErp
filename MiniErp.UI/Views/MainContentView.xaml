@@ -28,233 +28,240 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TreeView Grid.Column="0"
-                  Grid.RowSpan="2">
-            <TreeView.Resources>
-                <Style TargetType="{x:Type TreeViewItem}">
-                    <Setter Property="Margin"
-                            Value="2,2,2,2">
-                    </Setter>
-                </Style>
-            </TreeView.Resources>
-            <TreeViewItem IsExpanded="True">
-                <TreeViewItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="../Resources/category-alt.png"
-                               Height="16"
-                               Width="16"
-                               Margin="0, 0, 4, 0"></Image>
-                        <TextBlock Text="{DynamicResource Category}" />
-                    </StackPanel>
-                </TreeViewItem.Header>
+        <StackPanel Margin="0 0 0 0"
+                    Grid.Column="0"
+                    Grid.RowSpan="2">
+            <Image x:Name="Logo_Copy"
+                   HorizontalAlignment="Left"
+                   Margin="40 30 40 30"
+                   Source="../Resources/++_logo_red (3).png" />
+            <TreeView MaxHeight="800">
+                <TreeView.Resources>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="Margin"
+                                Value="2,2,2,2">
+                        </Setter>
+                    </Style>
+                </TreeView.Resources>
                 <TreeViewItem IsExpanded="True">
                     <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding CurrencyCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/usd-circle.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource ExchangeRates}" />
-                            </StackPanel>
-                        </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Resources/category-alt.png"
+                                   Height="16"
+                                   Width="16"
+                                   Margin="0, 0, 4, 0"></Image>
+                            <TextBlock Text="{DynamicResource Category}" />
+                        </StackPanel>
                     </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Command="{Binding UnitCommand}"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/bacterium.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Unit}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding CustomerCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/Customer.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Customer}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding ProviderCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/house-window.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Provider}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding ProductCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/Product.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Product}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem IsExpanded="True"
-                              Visibility="Collapsed">
-                    <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding RoleCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/options.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="Chức vụ" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-            </TreeViewItem>
-            <TreeViewItem IsExpanded="True">
-                <TreeViewItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="../Resources/function-process.png"
-                               Height="16"
-                               Width="16"
-                               Margin="0, 0, 4, 0"></Image>
-                        <TextBlock Text="{DynamicResource InventoryManagement}" />
-                    </StackPanel>
-                </TreeViewItem.Header>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding ReceiveNoteCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/inputInventory.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource InventoryIn}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding CurrencyCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/usd-circle.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource ExchangeRates}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Command="{Binding UnitCommand}"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/bacterium.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Unit}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding CustomerCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/Customer.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Customer}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding ProviderCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/house-window.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Provider}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding ProductCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/Product.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Product}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True"
+                                  Visibility="Collapsed">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding RoleCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/options.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="Chức vụ" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
                 </TreeViewItem>
                 <TreeViewItem IsExpanded="True">
                     <TreeViewItem.Header>
-                        <Button Background="Transparent"
-                                Command="{Binding DeliveryNoteCommand}"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/outputInventory.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource InventoryOut}" />
-                            </StackPanel>
-                        </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Resources/function-process.png"
+                                   Height="16"
+                                   Width="16"
+                                   Margin="0, 0, 4, 0"></Image>
+                            <TextBlock Text="{DynamicResource InventoryManagement}" />
+                        </StackPanel>
                     </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Command="{Binding InventoryCommand}"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/inventory-alt.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Inventory}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding ReceiveNoteCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/inputInventory.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource InventoryIn}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Background="Transparent"
+                                    Command="{Binding DeliveryNoteCommand}"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/outputInventory.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource InventoryOut}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Command="{Binding InventoryCommand}"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/inventory-alt.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Inventory}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
 
-            </TreeViewItem>
-            <TreeViewItem IsExpanded="True">
-                <TreeViewItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="../Resources/user-gear.png"
-                               Height="16"
-                               Width="16"
-                               Margin="0, 0, 4, 0"></Image>
-                        <TextBlock Text="{DynamicResource HRM}" />
-                    </StackPanel>
-                </TreeViewItem.Header>
-                <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Command="{Binding UserCommand}"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/employee-man.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Personnel}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
                 </TreeViewItem>
                 <TreeViewItem IsExpanded="True">
                     <TreeViewItem.Header>
-                        <Button Command="{Binding TimeKeepingCommand}"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/fingerprint.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Timekeeping}" />
-                            </StackPanel>
-                        </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Resources/user-gear.png"
+                                   Height="16"
+                                   Width="16"
+                                   Margin="0, 0, 4, 0"></Image>
+                            <TextBlock Text="{DynamicResource HRM}" />
+                        </StackPanel>
                     </TreeViewItem.Header>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Command="{Binding UserCommand}"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/employee-man.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Personnel}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Command="{Binding TimeKeepingCommand}"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/fingerprint.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Timekeeping}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                    <TreeViewItem IsExpanded="True">
+                        <TreeViewItem.Header>
+                            <Button Command="{Binding CheckOutCommand}"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="../Resources/time-check.png"
+                                           Height="16"
+                                           Width="16"
+                                           Margin="0, 0, 4, 0"></Image>
+                                    <TextBlock Text="{DynamicResource Checkout}" />
+                                </StackPanel>
+                            </Button>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
                 </TreeViewItem>
                 <TreeViewItem IsExpanded="True">
-                    <TreeViewItem.Header>
-                        <Button Command="{Binding CheckOutCommand}"
-                                Background="Transparent"
-                                BorderThickness="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="../Resources/time-check.png"
-                                       Height="16"
-                                       Width="16"
-                                       Margin="0, 0, 4, 0"></Image>
-                                <TextBlock Text="{DynamicResource Checkout}" />
-                            </StackPanel>
-                        </Button>
-                    </TreeViewItem.Header>
                 </TreeViewItem>
-            </TreeViewItem>
-            <TreeViewItem IsExpanded="True">
-            </TreeViewItem>
-        </TreeView>
+            </TreeView>
+        </StackPanel>
         <Grid Grid.Column="1">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right">
@@ -270,7 +277,6 @@
                                        Width="20"
                                        Height="20"
                                        Margin="0 0 5 0" />
-                                <!--<TextBlock Text="{Binding Language}" />-->
                             </StackPanel>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>

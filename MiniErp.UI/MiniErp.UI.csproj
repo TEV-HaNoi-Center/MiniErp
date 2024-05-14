@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <None Remove="Resources\++_logo_red %282%29.png" />
+    <None Remove="Resources\++_logo_red %283%29.png" />
     <None Remove="Resources\back_groud.png" />
     <None Remove="Resources\bacterium.png" />
     <None Remove="Resources\category-alt.png" />
@@ -58,6 +59,7 @@
 
   <ItemGroup>
     <Resource Include="Resources\++_logo_red (2).png" />
+    <Resource Include="Resources\++_logo_red (3).png" />
     <Resource Include="Resources\back_groud.png" />
     <Resource Include="Resources\en-flag (1).png" />
     <Resource Include="Resources\flag-south-korea.png" />
