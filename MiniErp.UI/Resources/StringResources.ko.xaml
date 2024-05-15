@@ -44,4 +44,121 @@
     <system:String x:Key="CurrencyName">통화명</system:String>
     <system:String x:Key="ConversionRate">전환율</system:String>
 
+    <!--Tai du lieu-->
+    <system:String x:Key="LoadData">데이터 로딩</system:String>
+
+    <!--Ten don vi tinh-->
+    <system:String x:Key="UnitName">단위 이름</system:String>
+
+    <!--Ten khach hang-->
+    <system:String x:Key="CustomerName">고객 이름</system:String>
+
+    <!--Ma khach hang-->
+    <system:String x:Key="CustomerCode">고객 번호</system:String>
+
+    <!--Dia chi-->
+    <system:String x:Key="Address">주소</system:String>
+
+    <!--Email-->
+    <system:String x:Key="Email">이메일</system:String>
+
+    <!--SDT-->
+    <system:String x:Key="SDT">전화번호</system:String>
+
+    <!--Ten nha cung cap-->
+    <system:String x:Key="SupplierName">공급업체 이름</system:String>
+
+    <!--Ma nha cung cap-->
+    <system:String x:Key="SupplierCode">공급업체 코드</system:String>
+
+    <!--Ten san pham-->
+    <system:String x:Key="ProductName">제품 이름</system:String>
+
+    <!--Ma san pham-->
+    <system:String x:Key="ProductCode">제품 코드</system:String>
+
+    <!--Mo ta-->
+    <system:String x:Key="Description">설명</system:String>
+
+    <!--So phieu-->
+    <system:String x:Key="VoucherNumber">전표 번호</system:String>
+
+    <!--Ngay nhap-->
+    <system:String x:Key="EntryDate">입력 날짜</system:String>
+
+    <!--So don hang-->
+    <system:String x:Key="OrderNumber">주문 번호</system:String>
+
+    <!--Tong tien-->
+    <system:String x:Key="TotalAmount">총 금액</system:String>
+
+    <!--Ngay xuat-->
+    <system:String x:Key="ExportDate">출고 날짜</system:String>
+
+    <!--So luong ton-->
+    <system:String x:Key="StockQuantity">재고 수량</system:String>
+
+    <!--Ten nguoi dung-->
+    <system:String x:Key="Username">사용자 이름</system:String>
+
+    <!--Ngay cham cong-->
+    <system:String x:Key="AttendanceDate">출근 날짜</system:String>
+    
+    <!--Vai tro-->
+    <system:String x:Key="Role">역할</system:String>
+
+    <!--Vai tro-->
+    <system:String x:Key="FingerprintScanning">지문 스캐닝</system:String>
+
+    <!--Ngay-->
+    <system:String x:Key="Date">날짜</system:String>
+
+    <!--Gio vao-->
+    <system:String x:Key="CheckinTime">출근 시간</system:String>
+
+    <!--Gio ra-->
+    <system:String x:Key="CheckoutTime">퇴근 시간</system:String>
+    
+    <!--Xác nhận-->
+    <system:String x:Key="Confirm">확인</system:String>
+
+    <!--Hủy-->
+    <system:String x:Key="Cancel">취소</system:String>
+
+    <!--Xuất Excel-->
+    <system:String x:Key="Export">엑셀로 내보내기</system:String>
+    
+    <!--TOPV Attendance Chart-->
+    <system:String x:Key="TOPVAttendanceChart">TOPV 출석표</system:String>
+
+    <!--Them san pham-->
+    <system:String x:Key="AddProduct">제품 추가</system:String>
+
+    <!--Xoa san pham-->
+    <system:String x:Key="DeleteProduct">제품 삭제</system:String>
+
+    <!--Luu-->
+    <system:String x:Key="Save">저장</system:String>
+
+    <!--So luong-->
+    <system:String x:Key="Quantity">수량</system:String>
+
+    <!--Don gia-->
+    <system:String x:Key="UnitPrice">단가</system:String>
+
+    <!--Loai tien-->
+    <system:String x:Key="Currency">통화</system:String>
+
+    <!--Tỷ giá-->
+    <system:String x:Key="ExchangeRate">환율</system:String>
+
+    <!--Ghi chú-->
+    <system:String x:Key="Note">참고</system:String>
+
+    <!--Tiền tệ-->
+    <system:String x:Key="Currency_">통화</system:String>
+    
+    <!--Thành tiền (VNĐ)-->
+    <system:String x:Key="TotalAmount_">총액 (VNĐ)</system:String>
+
 </ResourceDictionary>

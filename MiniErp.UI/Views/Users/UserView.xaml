@@ -12,13 +12,13 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel Width="300">
-            <GroupBox Header="Email">
+            <GroupBox Header="{DynamicResource Email}">
                 <TextBox IsReadOnly="True" Text="{Binding Data.Email, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Tên người dùng">
+            <GroupBox Header="{DynamicResource Username}">
                 <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Vai trò">
+            <GroupBox Header="{DynamicResource Role}">
                 <ComboBox ItemsSource="{Binding RoleList}"
                         SelectedItem="{Binding Role}"
                         IsSynchronizedWithCurrentItem="True">           
@@ -33,8 +33,8 @@
             </GroupBox>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Xác nhận" Command="{Binding ConfirmCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Hủy" Command="{Binding CancelCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Confirm}" Command="{Binding ConfirmCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Cancel}" Command="{Binding CancelCommand}" Width="100px" Margin="5,5,5,5"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -25,13 +25,19 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <GroupBox Grid.Column="0" Grid.Row="0" Header="Tên sản phẩm">
+            <GroupBox Grid.Column="0"
+                      Grid.Row="0"
+                      Header="{DynamicResource ProductName}">
                 <TextBox Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="1" Grid.Row="0" Header="Mã sản phẩm">
+            <GroupBox Grid.Column="1"
+                      Grid.Row="0"
+                      Header="{DynamicResource ProductCode}">
                 <TextBox Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="2" Grid.Row="0" Header="Đơn vị tính">
+            <GroupBox Grid.Column="2"
+                      Grid.Row="0"
+                      Header="{DynamicResource Unit}">
                 <ComboBox ItemsSource="{Binding ListUnit}"
                         SelectedItem="{Binding Unit}"
                         IsSynchronizedWithCurrentItem="True">
@@ -44,7 +50,10 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </GroupBox>
-            <GroupBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Header="Mô tả">
+            <GroupBox Grid.Column="0"
+                      Grid.Row="1"
+                      Grid.ColumnSpan="3"
+                      Header="{DynamicResource Description}">
                 <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
         </Grid>
@@ -63,10 +72,10 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
-                        <GridViewColumn Header="Mã sản phẩm" DisplayMemberBinding="{Binding Code}"/>
-                        <GridViewColumn Header="Tên Sản phẩm" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="Đơn vị tính" DisplayMemberBinding="{Binding Unit.Name}"/>
-                        <GridViewColumn Header="Mô tả" DisplayMemberBinding="{Binding Description}"/>
+                        <GridViewColumn Header="{DynamicResource ProductCode}" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="{DynamicResource ProductName}" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="{DynamicResource Unit}" DisplayMemberBinding="{Binding Unit.Name}"/>
+                        <GridViewColumn Header="{DynamicResource Description}" DisplayMemberBinding="{Binding Description}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

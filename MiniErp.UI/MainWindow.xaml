@@ -16,12 +16,11 @@
         Background="Transparent"
         MouseDown="Window_MouseDown">
     <Border CornerRadius="12">
-        <Border.Background>
+        <!--<Border.Background>
             <ImageBrush ImageSource="/Resources/back_groud.png"
                         Stretch="Fill" />
-        </Border.Background>
-        <Border CornerRadius="10"
-                BorderThickness="1"
+        </Border.Background>-->
+        <Border BorderThickness="1"
                 Opacity="0.90">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0, 0"

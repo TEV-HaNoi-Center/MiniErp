@@ -81,7 +81,7 @@
                                 </Style.Triggers>
                             </Style>
                         </StackPanel.Style>
-                        <TextBlock Text="Email" />
+                        <TextBlock Text="{DynamicResource Email}" />
                         <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
                                  FontSize="13"
                                  x:Name="EmailtxtBox"

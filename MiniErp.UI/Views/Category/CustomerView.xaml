@@ -25,13 +25,19 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <GroupBox Grid.Column="0" Grid.Row="0" Header="Tên khách hàng">
+            <GroupBox Grid.Column="0"
+                      Grid.Row="0"
+                      Header="{DynamicResource CustomerName}">
                 <TextBox Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="1" Grid.Row="0" Header="Mã khách hàng">
+            <GroupBox Grid.Column="1"
+                      Grid.Row="0"
+                      Header="{DynamicResource CustomerCode}">
                 <TextBox Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Grid.Column="2" Grid.Row="0" Header="Địa chỉ">
+            <GroupBox Grid.Column="2"
+                      Grid.Row="0"
+                      Header="{DynamicResource Address}">
                 <TextBox Text="{Binding Address, TargetNullValue='', UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                 </TextBox>
             </GroupBox>
@@ -40,10 +46,12 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <GroupBox Grid.Column="0" Header="Email">
+                <GroupBox Grid.Column="0"
+                          Header="{DynamicResource Email}">
                     <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                 </GroupBox>
-                <GroupBox Grid.Column="1" Header="Số điện thoại">
+                <GroupBox Grid.Column="1"
+                          Header="{DynamicResource SDT}">
                     <TextBox Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
                 </GroupBox>
             </Grid>
@@ -63,11 +71,11 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
-                        <GridViewColumn Header="Mã khách hàng" DisplayMemberBinding="{Binding Code}"/>
-                        <GridViewColumn Header="Tên khách hàng" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="Địa chỉ" DisplayMemberBinding="{Binding Address}"/>
-                        <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
-                        <GridViewColumn Header="Số điện thoại" DisplayMemberBinding="{Binding PhoneNumber}"/>
+                        <GridViewColumn Header="{DynamicResource CustomerCode}" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="{DynamicResource CustomerName}" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="{DynamicResource Address}" DisplayMemberBinding="{Binding Address}"/>
+                        <GridViewColumn Header="{DynamicResource Email}" DisplayMemberBinding="{Binding Email}"/>
+                        <GridViewColumn Header="{DynamicResource SDT}" DisplayMemberBinding="{Binding PhoneNumber}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

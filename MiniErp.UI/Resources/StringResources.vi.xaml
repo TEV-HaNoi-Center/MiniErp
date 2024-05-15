@@ -43,4 +43,122 @@
     <system:String x:Key="CurrencyCode">Mã tiền tệ</system:String>
     <system:String x:Key="CurrencyName">Tên tiền tệ</system:String>
     <system:String x:Key="ConversionRate">Tỷ lệ quy đổi</system:String>
+    
+    <!--Tai du lieu-->
+    <system:String x:Key="LoadData">Tải dữ liệu</system:String>
+
+    <!--Ten don vi tinh-->
+    <system:String x:Key="UnitName">Tên đơn vị tính</system:String>
+
+    <!--Ten khach hang-->
+    <system:String x:Key="CustomerName">Tên khách hàng</system:String>
+
+    <!--Ma khach hang-->
+    <system:String x:Key="CustomerCode">Mã khách hàng</system:String>
+
+    <!--Dia chi-->
+    <system:String x:Key="Address">Địa chỉ</system:String>
+
+    <!--Email-->
+    <system:String x:Key="Email">Email</system:String>
+
+    <!--SDT-->
+    <system:String x:Key="SDT">Số điện thoại</system:String>
+
+    <!--Ten nha cung cap-->
+    <system:String x:Key="SupplierName">Tên nhà cung cấp</system:String>
+
+    <!--Ma nha cung cap-->
+    <system:String x:Key="SupplierCode">Mã nhà cung cấp</system:String>
+
+    <!--Ten san pham-->
+    <system:String x:Key="ProductName">Tên sản phẩm</system:String>
+
+    <!--Ma san pham-->
+    <system:String x:Key="ProductCode">Mã sản phẩm</system:String>
+
+    <!--Mo ta-->
+    <system:String x:Key="Description">Mô tả</system:String>
+
+    <!--So phieu-->
+    <system:String x:Key="VoucherNumber">Số phiếu</system:String>
+
+    <!--Ngay nhap-->
+    <system:String x:Key="EntryDate">Ngày nhập</system:String>
+
+    <!--So don hang-->
+    <system:String x:Key="OrderNumber">Số đơn hàng</system:String>
+
+    <!--Tong tien-->
+    <system:String x:Key="TotalAmount">Tổng tiền</system:String>
+
+    <!--Ngay xuat-->
+    <system:String x:Key="ExportDate">Ngày xuất</system:String>
+
+    <!--So luong ton-->
+    <system:String x:Key="StockQuantity">Số lượng tồn</system:String>
+
+    <!--Ten nguoi dung-->
+    <system:String x:Key="Username">Tên người dùng</system:String>
+
+    <!--Ngay cham cong-->
+    <system:String x:Key="AttendanceDate">Ngày chấm công</system:String>
+
+    <!--Vai tro-->
+    <system:String x:Key="Role">Vai trò</system:String>
+
+    <!--Vai tro-->
+    <system:String x:Key="FingerprintScanning">Lấy vân tay</system:String>
+
+    <!--Ngay-->
+    <system:String x:Key="Date">Ngày</system:String>
+
+    <!--Gio vao-->
+    <system:String x:Key="CheckinTime">Giờ vào</system:String>
+
+    <!--Gio ra-->
+    <system:String x:Key="CheckoutTime">Giờ ra</system:String>
+
+    <!--Xác nhận-->
+    <system:String x:Key="Confirm">Xác nhận</system:String>
+
+    <!--Hủy-->
+    <system:String x:Key="Cancel">Hủy</system:String>
+
+    <!--Xuất Excel-->
+    <system:String x:Key="Export">Xuất Excel</system:String>
+
+    <!--TOPV Attendance Chart-->
+    <system:String x:Key="TOPVAttendanceChart">Biểu chấm công TOPV</system:String>
+
+    <!--Them san pham-->
+    <system:String x:Key="AddProduct">Thêm sản phẩm</system:String>
+
+    <!--Xoa san pham-->
+    <system:String x:Key="DeleteProduct">Xóa sản phẩm</system:String>
+
+    <!--Luu-->
+    <system:String x:Key="Save">Lưu</system:String>
+
+    <!--So luong-->
+    <system:String x:Key="Quantity">Số lượng</system:String>
+
+    <!--Don gia-->
+    <system:String x:Key="UnitPrice">Đơn giá</system:String>
+
+    <!--Loai tien-->
+    <system:String x:Key="Currency">Loại tiền</system:String>
+
+    <!--Tỷ giá-->
+    <system:String x:Key="ExchangeRate">Tỷ giá</system:String>
+
+    <!--Ghi chú-->
+    <system:String x:Key="Note">Ghi chú</system:String>
+
+    <!--Tiền tệ-->
+    <system:String x:Key="Currency_">Tiền tệ</system:String>
+
+    <!--Thành tiền (VNĐ)-->
+    <system:String x:Key="TotalAmount_">Thành tiền (VNĐ)</system:String>
+
 </ResourceDictionary>

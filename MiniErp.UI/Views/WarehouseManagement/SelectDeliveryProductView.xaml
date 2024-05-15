@@ -20,13 +20,13 @@
             <GroupBox Header="Lọc theo tên/mã sản phẩm">
                 <TextBox Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Tên sản phẩm">
+            <GroupBox Header="{DynamicResource ProductName}">
                 <TextBox IsReadOnly="True" Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Mã sản phẩm">
+            <GroupBox Header="{DynamicResource ProductCode}">
                 <TextBox IsReadOnly="True" Text="{Binding Code, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Đơn vị tính">
+            <GroupBox Header="{DynamicResource Unit}">
                 <ComboBox ItemsSource="{Binding ListUnit}"
                  SelectedItem="{Binding SelectedUnit}"
                  IsSynchronizedWithCurrentItem="True">
@@ -39,7 +39,7 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </GroupBox>
-            <GroupBox Header="Số lượng">
+            <GroupBox Header="{DynamicResource Quantity}">
                 <TextBox Text="{Binding Quantity, TargetNullValue=''}">
                     <i:Interaction.Behaviors>
                         <local:TextBoxInputBehavior InputMode="DigitInput"/>
@@ -51,7 +51,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <GroupBox Header="Tiền tệ">
+                <GroupBox Header="{DynamicResource Currency_}">
                     <ComboBox ItemsSource="{Binding ListCurrency}"
              SelectedItem="{Binding SelectedCurrency}"
              IsSynchronizedWithCurrentItem="True">
@@ -64,22 +64,23 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                 </GroupBox>
-                <GroupBox Grid.Column="1" Header="Tỷ giá">
+                <GroupBox Grid.Column="1"
+                          Header="{DynamicResource ExchangeRate}">
                     <TextBox IsReadOnly="True" Text="{Binding ExchangeRate}"></TextBox>
                 </GroupBox>
             </Grid>
 
-            <GroupBox Header="Đơn giá">
+            <GroupBox Header="{DynamicResource UnitPrice}">
                 <TextBox Text="{Binding Price, TargetNullValue=''}">
                     <i:Interaction.Behaviors>
                         <local:TextBoxInputBehavior InputMode="DecimalInput"/>
                     </i:Interaction.Behaviors>
                 </TextBox>
             </GroupBox>
-            <GroupBox Header="Thành tiền (VND)">
+            <GroupBox Header="{DynamicResource TotalAmount_}">
                 <TextBox IsReadOnly="True" Text="{Binding Total, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Mô tả">
+            <GroupBox Header="{DynamicResource Description}">
                 <TextBox Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, TargetNullValue=''}"></TextBox>
             </GroupBox>
         </StackPanel>
@@ -93,17 +94,17 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
-                        <GridViewColumn Header="Mã sản phẩm" DisplayMemberBinding="{Binding Code}"/>
-                        <GridViewColumn Header="Tên Sản phẩm" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="Đơn vị tính" DisplayMemberBinding="{Binding Unit.Name}"/>
-                        <GridViewColumn Header="Mô tả" DisplayMemberBinding="{Binding Description}"/>
+                        <GridViewColumn Header="{DynamicResource ProductCode}" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="{DynamicResource ProductName}" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="{DynamicResource Unit}" DisplayMemberBinding="{Binding Unit.Name}"/>
+                        <GridViewColumn Header="{DynamicResource Description}" DisplayMemberBinding="{Binding Description}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
         </ScrollViewer>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Xác nhận" Command="{Binding ConfirmCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Hủy" Command="{Binding CancelCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Confirm}" Command="{Binding ConfirmCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Cancel}" Command="{Binding CancelCommand}" Width="100px" Margin="5,5,5,5"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -34,13 +34,13 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <GroupBox Header="Email">
+            <GroupBox Header="{DynamicResource Email}">
                 <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Tên người dùng" Grid.Column="1">
+            <GroupBox Header="{DynamicResource Username}" Grid.Column="1">
                 <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Vai trò" Grid.Row="1">
+            <GroupBox Header="{DynamicResource Role}" Grid.Row="1">
                 <ComboBox ItemsSource="{Binding RoleList}"
                     SelectedItem="{Binding Role}"
                     IsSynchronizedWithCurrentItem="True">
@@ -53,14 +53,14 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </GroupBox>
-            <GroupBox Header="Ngày chấm công" Grid.Column="1" Grid.Row="1">
+            <GroupBox Header="{DynamicResource AttendanceDate}" Grid.Column="1" Grid.Row="1">
                 <DatePicker SelectedDate="{Binding Date, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></DatePicker>
             </GroupBox>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Tải dữ liệu" Command="{Binding LoadCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Lấy vân tay" Command="{Binding RegisterCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="Export" Command="{Binding ExportCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource LoadData}" Command="{Binding LoadCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource FingerprintScanning}" Command="{Binding RegisterCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource Export}" Command="{Binding ExportCommand}" Width="100px" Margin="5,5,5,5"/>
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" >
             <ListView Margin="5" ItemsSource="{Binding List, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
@@ -75,12 +75,12 @@
                         <GridViewColumn Header="STT" DisplayMemberBinding="{Binding RelativeSource={RelativeSource FindAncestor, 
                              AncestorType={x:Type ListViewItem}}, 
                              Converter={StaticResource IndexConverter}}"/>
-                        <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
-                        <GridViewColumn Header="Tên người dùng" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="Vai trò" DisplayMemberBinding="{Binding Role.Name}" />
-                        <GridViewColumn Header="Ngày" DisplayMemberBinding="{Binding Date}" />
-                        <GridViewColumn Header="Giờ vào" DisplayMemberBinding="{Binding CheckInTime}" />
-                        <GridViewColumn Header="Giờ ra" DisplayMemberBinding="{Binding CheckOutTime}" />
+                        <GridViewColumn Header="{DynamicResource Email}" DisplayMemberBinding="{Binding Email}"/>
+                        <GridViewColumn Header="{DynamicResource Username}" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="{DynamicResource Role}" DisplayMemberBinding="{Binding Role.Name}" />
+                        <GridViewColumn Header="{DynamicResource Date}" DisplayMemberBinding="{Binding Date}" />
+                        <GridViewColumn Header="{DynamicResource CheckinTime}" DisplayMemberBinding="{Binding CheckInTime}" />
+                        <GridViewColumn Header="{DynamicResource CheckoutTime}" DisplayMemberBinding="{Binding CheckOutTime}" />
                     </GridView>
                 </ListView.View>
             </ListView>

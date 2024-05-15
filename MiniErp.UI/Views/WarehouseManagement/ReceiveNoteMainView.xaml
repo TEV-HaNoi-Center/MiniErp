@@ -26,7 +26,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <GroupBox Header="Mã NCC">
+            <GroupBox Header="{DynamicResource SupplierCode}">
                 <ComboBox ItemsSource="{Binding ProviderList}"
                         SelectedItem="{Binding Provider}"
                         IsSynchronizedWithCurrentItem="True">
@@ -39,24 +39,24 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </GroupBox>
-            <GroupBox Header="Tên NCC" Grid.Row="1">
+            <GroupBox Header="{DynamicResource SupplierName}" Grid.Row="1">
                 <TextBox IsReadOnly="True" Text="{Binding Provider.Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Địa chỉ" Grid.Row="2">
+            <GroupBox Header="{DynamicResource Address}" Grid.Row="2">
                 <TextBox IsReadOnly="True" Text="{Binding Provider.Address, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Số phiếu" Grid.Column="1">
+            <GroupBox Header="{DynamicResource VoucherNumber}" Grid.Column="1">
                 <TextBox Text="{Binding Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
-            <GroupBox Header="Ngày nhập" Grid.Column="1" Grid.Row="1">
+            <GroupBox Header="{DynamicResource EntryDate}" Grid.Column="1" Grid.Row="1">
                 <DatePicker SelectedDate="{Binding Date, TargetNullValue={x:Static sys:DateTime.Now}, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></DatePicker>
             </GroupBox>
-            <GroupBox Header="Số đơn hàng" Grid.Column="1" Grid.Row="2">
+            <GroupBox Header="{DynamicResource OrderNumber}" Grid.Column="1" Grid.Row="2">
                 <TextBox Text="{Binding OrderCode}"></TextBox>
             </GroupBox>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Tải dữ liệu" Command="{Binding LoadCommand}" Width="100px" Margin="5,5,5,5"/>
+            <Button Content="{DynamicResource LoadData}" Command="{Binding LoadCommand}" Width="100px" Margin="5,5,5,5"/>
             <Button Content="{DynamicResource Add}" Command="{Binding AddCommand}" Width="100px" Margin="5,5,5,5"/>
             <Button Content="{DynamicResource Fix}" Command="{Binding UpdateCommand}" Width="100px" Margin="5,5,5,5"/>
             <Button Content="{DynamicResource Delete}" Command="{Binding DeleteCommand}" Width="100px" Margin="5,5,5,5"/>
@@ -75,11 +75,11 @@
                         <GridViewColumn Header="STT" DisplayMemberBinding="{Binding RelativeSource={RelativeSource FindAncestor, 
                                          AncestorType={x:Type ListViewItem}}, 
                                          Converter={StaticResource IndexConverter}}"/>
-                        <GridViewColumn Header="Số phiếu" DisplayMemberBinding="{Binding Code}"/>
-                        <GridViewColumn Header="Ngày nhập" DisplayMemberBinding="{Binding Date, StringFormat='dd/MM/yyyy'}"/>
-                        <GridViewColumn Header="Số đơn hàng" DisplayMemberBinding="{Binding OrderCode}" />
-                        <GridViewColumn Header="Nhà cung cấp" DisplayMemberBinding="{Binding ProviderName}"/>
-                        <GridViewColumn Header="Tổng tiền" DisplayMemberBinding="{Binding Total}" />
+                        <GridViewColumn Header="{DynamicResource VoucherNumber}" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="{DynamicResource EntryDate}" DisplayMemberBinding="{Binding Date, StringFormat='dd/MM/yyyy'}"/>
+                        <GridViewColumn Header="{DynamicResource OrderNumber}" DisplayMemberBinding="{Binding OrderCode}" />
+                        <GridViewColumn Header="{DynamicResource Provider}" DisplayMemberBinding="{Binding ProviderName}"/>
+                        <GridViewColumn Header="{DynamicResource TotalAmount}" DisplayMemberBinding="{Binding Total}" />
                     </GridView>
                 </ListView.View>
             </ListView>

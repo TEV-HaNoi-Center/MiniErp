@@ -29,7 +29,7 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0">
-                <TextBlock Text="Email" />
+                <TextBlock Text="{DynamicResource Email}" />
                 <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
 

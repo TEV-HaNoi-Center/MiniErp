@@ -35,7 +35,8 @@
                    HorizontalAlignment="Left"
                    Margin="40 30 40 30"
                    Source="../Resources/++_logo_red (3).png" />
-            <TreeView MaxHeight="800">
+            <TreeView MaxHeight="800"
+                      MinHeight="475">
                 <TreeView.Resources>
                     <Style TargetType="{x:Type TreeViewItem}">
                         <Setter Property="Margin"

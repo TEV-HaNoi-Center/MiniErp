@@ -23,9 +23,9 @@
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Mã sản phẩm" DisplayMemberBinding="{Binding Code}"/>
-                        <GridViewColumn Header="Tên sản phẩm" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="Số lượng tồn" DisplayMemberBinding="{Binding Quantity}" />
+                        <GridViewColumn Header="{DynamicResource ProductCode}" DisplayMemberBinding="{Binding Code}"/>
+                        <GridViewColumn Header="{DynamicResource ProductName}" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="{DynamicResource StockQuantity}" DisplayMemberBinding="{Binding Quantity}" />
                     </GridView>
                 </ListView.View>
             </ListView>

@@ -61,7 +61,7 @@
             </Grid.RowDefinitions>
 
             <Label Grid.ColumnSpan="2"
-                   Content="Biểu chấm công TOPV - 출근 첵크"
+                   Content="{DynamicResource TOPVAttendanceChart}"
                    FontSize="20"
                    FontWeight="Bold" />
 

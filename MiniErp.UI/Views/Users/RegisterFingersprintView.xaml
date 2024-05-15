@@ -27,8 +27,8 @@
             </ComboBox>
         </GroupBox>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Height="Auto">
-            <Button Content="Lấy vân tay" Command="{Binding RegisterCommand}" Width="100" Margin="5"/>
-            <Button Content="Hủy" Command="{Binding CancelCommand}" Width="100" Margin="5"/>
+            <Button Content="{DynamicResource FingerprintScanning}" Command="{Binding RegisterCommand}" Width="100" Margin="5"/>
+            <Button Content="{DynamicResource Cancel}" Command="{Binding CancelCommand}" Width="100" Margin="5"/>
         </StackPanel>
     </Grid>
 </UserControl>
