@@ -42,6 +42,7 @@ namespace MiniErp.UI.ViewModels
         public ICommand LoadCommand { get; set; }
         public ICommand RegisterCommand { get; set; }
         public ICommand ExportCommand { get; set; }
+        public ICommand CalculationCommand { get; set; }
 
         public TimeKeepingViewModel(MainContentStore mainContentStore, IRepository<TimeKeeping> timeKeepingRepository, IRepository<Role> roleRepository)
         {
@@ -54,7 +55,10 @@ namespace MiniErp.UI.ViewModels
             {
                 _mainContentStore.CurrentViewModel = IoC.Resolve<RegisterFingersprintViewModel>();
             });
-
+            CalculationCommand = new RelayCommand<object>(p => true, async p =>
+            {
+                _mainContentStore.CurrentViewModel = IoC.Resolve<PersonnelCalculationViewModel>();
+            });
             LoadCommand = new RelayCommand<object>(p => true, async p =>
             {
                 await LoadData();

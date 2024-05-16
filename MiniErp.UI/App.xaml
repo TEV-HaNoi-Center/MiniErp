@@ -1,7 +1,9 @@
 ﻿<Application x:Class="MiniErp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MiniErp">
+             xmlns:local="clr-namespace:MiniErp"
+             xmlns:usr="clr-namespace:MiniErp.UI.Views.Users"
+             xmlns:vm="clr-namespace:MiniErp.UI.ViewModels">
     <Application.Resources>
         
     </Application.Resources>

@@ -38,7 +38,7 @@
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="{DynamicResource Id}" DisplayMemberBinding="{Binding Id}"/>
                         <GridViewColumn Header="{DynamicResource UnitName}" DisplayMemberBinding="{Binding Name}"/>
                     </GridView>
                 </ListView.View>

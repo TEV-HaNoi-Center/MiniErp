@@ -340,6 +340,9 @@
                 <DataTemplate DataType="{x:Type vm:UserMainViewModel}">
                     <usr:UserMainView />
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:PersonnelCalculationViewModel}">
+                    <usr:PersonnelCalculationView />
+                </DataTemplate>
                 <DataTemplate DataType="{x:Type vm:UserViewModel}">
                     <usr:UserView />
                 </DataTemplate>
@@ -352,6 +355,7 @@
                 <DataTemplate DataType="{x:Type vm:CheckOutViewModel}">
                     <usr:CheckOutView />
                 </DataTemplate>
+
             </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="231*" />

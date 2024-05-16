@@ -161,4 +161,10 @@
     <!--Thành tiền (VNĐ)-->
     <system:String x:Key="TotalAmount_">Thành tiền (VNĐ)</system:String>
 
+    <!--Tên chức vụ-->
+    <system:String x:Key="JobTitle">Tên chức vụ</system:String>
+
+    <!--Tính công-->
+    <system:String x:Key="CalculateAttendance">Tính công</system:String>
+
 </ResourceDictionary>

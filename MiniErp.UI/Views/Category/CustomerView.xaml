@@ -70,7 +70,7 @@
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="{DynamicResource Id}" DisplayMemberBinding="{Binding Id}"/>
                         <GridViewColumn Header="{DynamicResource CustomerCode}" DisplayMemberBinding="{Binding Code}"/>
                         <GridViewColumn Header="{DynamicResource CustomerName}" DisplayMemberBinding="{Binding Name}"/>
                         <GridViewColumn Header="{DynamicResource Address}" DisplayMemberBinding="{Binding Address}"/>
