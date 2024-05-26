@@ -54,7 +54,7 @@
                         <ColumnDefinition Width="25" />
                         <ColumnDefinition Width="5" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{DynamicResource ResourceKey=Title}"
+                    <TextBlock Text="ERP"
                                Foreground="Black"
                                FontSize="10"
                                FontFamily="Montserrat"

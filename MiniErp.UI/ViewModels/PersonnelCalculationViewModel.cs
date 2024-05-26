@@ -172,13 +172,13 @@ namespace MiniErp.UI.ViewModels
                 HashSet<Guid> UserCodes = new HashSet<Guid>();
                 foreach (var item in timeKeepings)
                 {
-                    UserCodes.Add(item.Id);
+                    UserCodes.Add(item.UserId);
                 }
                 int Month = SelectMonth, Year = SelectYear;
                 foreach (var item in UserCodes)
                 {
                     Guid _id = item;
-                    string _name = timeKeepings.FirstOrDefault(x => x.Id == item).User.Name;
+                    string _name = timeKeepings.FirstOrDefault(x => x.UserId == _id).User.Name;
                     int _daywork = 0;
                     double _overtimeHours = 0.0, _leaveEarlyHours = 0.0;
                     foreach (var item2 in timeKeepings)
