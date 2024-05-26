@@ -263,7 +263,37 @@
                            Text="{Binding CurrentUser.UserCredential.User.Info.DisplayName}" />
                 <Button Content="{DynamicResource Logout}"
                         Margin="10 0 10 5"
-                        Command="{Binding LogoutCommand}"></Button>
+                        Command="{Binding LogoutCommand}"
+                        BorderThickness="0"
+                        Foreground="Black"
+                        FontWeight="Bold"
+                        FontFamily="Montserrat"
+                        Cursor="Hand">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background"
+                                    Value="#d12440" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver"
+                                         Value="True">
+                                    <Setter Property="Background"
+                                            Value="#d12469" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100"
+                                    Height="20"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </StackPanel>
         </Grid>
         <Grid x:Name="MainContent"
