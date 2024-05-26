@@ -78,6 +78,8 @@ namespace MiniErp.UI.DependencyInjection
             services.AddScoped<CheckOutViewModel>();
             services.AddScoped<PersonnelCalculationViewModel>();
             services.AddScoped<PersonnelCalculationView>();
+            services.AddScoped<HomeView>();
+            services.AddScoped<HomeViewModel>();
 
 
 

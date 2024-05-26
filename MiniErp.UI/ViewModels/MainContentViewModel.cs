@@ -34,6 +34,7 @@ namespace MiniErp.UI.ViewModels
         public ICommand UserCommand { get; set; }
         public ICommand TimeKeepingCommand { get; set; }
         public ICommand LoadCommand { get; set; }
+        public ICommand HomeViewCommand { get; set; }
         public BaseViewModel CurrentViewModel => _mainContentStore.CurrentViewModel;
         private LanguageModel _language;
         public LanguageModel Language { get => _language; set { _language = value; SwitchLanguage(Language.LanguageCode); OnPropertyChanged(); } }
@@ -44,6 +45,7 @@ namespace MiniErp.UI.ViewModels
         {
             _navigationStore = navigationStore;
             _mainContentStore = mainContentStore;
+            _mainContentStore.CurrentViewModel = new HomeViewModel();
             CurrentUser = user;
             _mainContentStore.CurrentViewModelChanged += OnCurrenViewModelChanged;
             _authClient = authClient;
@@ -138,7 +140,10 @@ namespace MiniErp.UI.ViewModels
             {
                 _mainContentStore.CurrentViewModel = IoC.Resolve<TimeKeepingViewModel>();
             });
-
+            HomeViewCommand = new RelayCommand<object>(p => CurrentUser.IsAdmin || CurrentUser.IsManager, p =>
+            {
+                _mainContentStore.CurrentViewModel = IoC.Resolve<HomeViewModel>();
+            });
             LoadCommand = new RelayCommand<object>(p => true, p =>
             {
                 Language = Languages[0];

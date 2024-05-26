@@ -1,4 +1,5 @@
-﻿using MiniErp.UI.ViewModels.Abstract;
+﻿using MiniErp.UI.ViewModels;
+using MiniErp.UI.ViewModels.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace MiniErp.UI.Stores
 {
     public class MainContentStore
     {
-        private BaseViewModel _currentViewModel;
+        private BaseViewModel _currentViewModel = new HomeViewModel();
         public BaseViewModel CurrentViewModel
         {
             get => _currentViewModel;
