@@ -266,64 +266,82 @@
             </StackPanel>
         </Border>
 
-        <Grid Grid.Column="1">
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Right">
-                <ComboBox ItemsSource="{Binding Languages}"
-                          SelectedItem="{Binding Language}"
-                          IsSynchronizedWithCurrentItem="True"
-                          Width="50"
-                          Margin="10 0 10 0">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="{Binding Icon}"
-                                       Width="20"
-                                       Height="20"
-                                       Margin="0 0 5 0" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-                <TextBlock Margin="0 1 0 5"
-                           Text="{DynamicResource Hello}" />
-                <TextBlock Margin="0 1 0 5"
-                           Text="{Binding CurrentUser.UserCredential.User.Info.DisplayName}" />
-                <Button Content="{DynamicResource Logout}"
-                        Margin="10 0 10 5"
-                        Command="{Binding LogoutCommand}"
-                        BorderThickness="0"
-                        Foreground="Black"
-                        FontWeight="Bold"
-                        FontFamily="Montserrat"
-                        Cursor="Hand">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background"
-                                    Value="#d12440" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver"
-                                         Value="True">
-                                    <Setter Property="Background"
-                                            Value="#d12469" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Width="100"
-                                    Height="20"
-                                    CornerRadius="20"
-                                    Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </StackPanel>
-        </Grid>
+        <Border Grid.Column="1"
+                BorderBrush="Gray"
+                BorderThickness="0 1 0 1">
+            <Grid Margin="0 2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Name="Clock"
+                       Foreground="Black"
+                       Opacity="0.7"
+                       FontSize="13"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Content="{Binding currentTime}"
+                       Grid.Column="0" />
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Grid.Column="1">
+                    <ComboBox ItemsSource="{Binding Languages}"
+                              SelectedItem="{Binding Language}"
+                              IsSynchronizedWithCurrentItem="True"
+                              Width="50"
+                              Margin="10 0 10 0">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding Icon}"
+                                           Width="20"
+                                           Height="20"
+                                           Margin="0 0 5 0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Margin="0 1 0 5"
+                               Text="{DynamicResource Hello}" />
+                    <TextBlock Margin="0 1 0 5"
+                               Text="{Binding CurrentUser.UserCredential.User.Info.DisplayName}" />
+                    <Button Content="{DynamicResource Logout}"
+                            Margin="10 0 10 5"
+                            Command="{Binding LogoutCommand}"
+                            BorderThickness="0"
+                            Foreground="Black"
+                            FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background"
+                                        Value="#d12440" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver"
+                                             Value="True">
+                                        <Setter Property="Background"
+                                                Value="#d12469" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="100"
+                                        Height="20"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
         <Grid x:Name="MainContent"
               Grid.Column="1"
               Grid.Row="1">
@@ -394,15 +412,16 @@
 
             </Grid.Resources>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="231*" />
+                <ColumnDefinition Width="21*" />
+                <ColumnDefinition Width="210*" />
                 <ColumnDefinition Width="199*" />
                 <ColumnDefinition Width="170*" />
             </Grid.ColumnDefinitions>
 
             <ContentControl Content="{Binding CurrentViewModel}"
-                            Grid.ColumnSpan="3" />
+                            Grid.ColumnSpan="4" />
             <local:LoadingSpinner Visibility="Hidden"
-                                  Grid.ColumnSpan="3" />
+                                  Grid.ColumnSpan="4" />
         </Grid>
     </Grid>
 </UserControl>

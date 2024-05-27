@@ -12,6 +12,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 
 namespace MiniErp.UI.ViewModels
 {
@@ -40,7 +41,25 @@ namespace MiniErp.UI.ViewModels
         public LanguageModel Language { get => _language; set { _language = value; SwitchLanguage(Language.LanguageCode); OnPropertyChanged(); } }
         private List<LanguageModel> _languages;
         public List<LanguageModel> Languages { get => _languages; set { _languages = value; OnPropertyChanged(); } }
-
+        private string _currentTime;
+        private string _currentDate;
+        public string currentTime
+        {
+            get
+            {
+                return _currentTime;
+            }
+            set
+            {
+                _currentTime = value;
+                OnPropertyChanged("currentTime");
+            }
+        }
+        DispatcherTimer TimerDemo;
+        private void TimerDemo_Tick(object sender, EventArgs e)
+        {
+            currentTime = DateTime.Now.ToString("HH:mm:ss    dd/MM/yyyy");
+        }
         public MainContentViewModel(NavigationStore navigationStore, MainContentStore mainContentStore, LoggedInUser user, FirebaseAuthClient authClient)
         {
             _navigationStore = navigationStore;
@@ -49,6 +68,13 @@ namespace MiniErp.UI.ViewModels
             CurrentUser = user;
             _mainContentStore.CurrentViewModelChanged += OnCurrenViewModelChanged;
             _authClient = authClient;
+
+
+            TimerDemo = new DispatcherTimer();
+            TimerDemo.Tick += new EventHandler(TimerDemo_Tick);
+            TimerDemo.Interval = TimeSpan.FromMilliseconds(1000); 
+            TimerDemo.Start();
+
             Languages = new List<LanguageModel>
             {
                 new LanguageModel

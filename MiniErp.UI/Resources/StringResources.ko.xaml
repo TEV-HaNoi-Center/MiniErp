@@ -166,5 +166,8 @@
 
     <!--Tính công-->
     <system:String x:Key="CalculateAttendance">근태 계산</system:String>
+    <!--in-->
+    <system:String x:Key="Print">인쇄</system:String>
+
 
 </ResourceDictionary>

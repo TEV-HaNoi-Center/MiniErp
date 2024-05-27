@@ -166,5 +166,7 @@
 
     <!--Tính công-->
     <system:String x:Key="CalculateAttendance">Calculate Attendance</system:String>
+    <!--in-->
+    <system:String x:Key="Print">Print</system:String>
 
 </ResourceDictionary>

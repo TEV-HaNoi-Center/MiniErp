@@ -13,13 +13,19 @@
   <ItemGroup>
     <None Remove="Resources\++_logo_red %282%29.png" />
     <None Remove="Resources\++_logo_red %283%29.png" />
+    <None Remove="Resources\add.png" />
     <None Remove="Resources\back_groud.png" />
     <None Remove="Resources\bacterium.png" />
+    <None Remove="Resources\calculate.png" />
+    <None Remove="Resources\cancel.png" />
     <None Remove="Resources\category-alt.png" />
     <None Remove="Resources\Customer.png" />
+    <None Remove="Resources\delete.png" />
     <None Remove="Resources\employee-man.png" />
     <None Remove="Resources\en-flag %281%29.png" />
+    <None Remove="Resources\excel.png" />
     <None Remove="Resources\fingerprint.png" />
+    <None Remove="Resources\fix.png" />
     <None Remove="Resources\flag-south-korea.png" />
     <None Remove="Resources\function-process.png" />
     <None Remove="Resources\house-window.png" />
@@ -29,7 +35,12 @@
     <None Remove="Resources\options.png" />
 
     <None Remove="Resources\outputInventory.png" />
+
+    <None Remove="Resources\print.png" />
+
+    <None Remove="Resources\process.png" />
     <None Remove="Resources\Product.png" />
+    <None Remove="Resources\search.png" />
     <None Remove="Resources\TevLogo.png" />
     <None Remove="Resources\time-check.png" />
     <None Remove="Resources\usd-circle.png" />
@@ -60,11 +71,20 @@
   <ItemGroup>
     <Resource Include="Resources\++_logo_red (2).png" />
     <Resource Include="Resources\++_logo_red (3).png" />
+    <Resource Include="Resources\add.png" />
     <Resource Include="Resources\back_groud.png" />
+    <Resource Include="Resources\calculate.png" />
+    <Resource Include="Resources\cancel.png" />
+    <Resource Include="Resources\delete.png" />
     <Resource Include="Resources\en-flag (1).png" />
+    <Resource Include="Resources\excel.png" />
+    <Resource Include="Resources\fix.png" />
     <Resource Include="Resources\flag-south-korea.png" />
     <Resource Include="Resources\function-process.png" />
     <Resource Include="Resources\key-icon.png" />
+    <Resource Include="Resources\print.png" />
+    <Resource Include="Resources\process.png" />
+    <Resource Include="Resources\search.png" />
     <Resource Include="Resources\TevLogo.png" />
     <Resource Include="Resources\bacterium.png" />
     <Resource Include="Resources\category-alt.png" />

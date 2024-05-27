@@ -1,35 +1,38 @@
 ﻿<UserControl x:Class="MiniErp.UI.Views.WarehouseManagement.SelectReceiveProductView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MiniErp.UI.CustomControls"
              xmlns:i="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel>
             <GroupBox Header="Lọc theo tên/mã sản phẩm">
                 <TextBox Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
             </GroupBox>
             <GroupBox Header="{DynamicResource ProductName}">
-                <TextBox IsReadOnly="True" Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <TextBox IsReadOnly="True"
+                         Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
             <GroupBox Header="{DynamicResource ProductCode}">
-                <TextBox IsReadOnly="True" Text="{Binding Code, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <TextBox IsReadOnly="True"
+                         Text="{Binding Code, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
             <GroupBox Header="{DynamicResource Unit}">
                 <ComboBox ItemsSource="{Binding ListUnit}"
-                     SelectedItem="{Binding SelectedUnit}"
-                     IsSynchronizedWithCurrentItem="True">
+                          SelectedItem="{Binding SelectedUnit}"
+                          IsSynchronizedWithCurrentItem="True">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -42,19 +45,19 @@
             <GroupBox Header="{DynamicResource Quantity}">
                 <TextBox Text="{Binding Quantity, TargetNullValue=''}">
                     <i:Interaction.Behaviors>
-                        <local:TextBoxInputBehavior InputMode="DigitInput"/>
+                        <local:TextBoxInputBehavior InputMode="DigitInput" />
                     </i:Interaction.Behaviors>
                 </TextBox>
             </GroupBox>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <GroupBox Header="{DynamicResource Currency_}">
                     <ComboBox ItemsSource="{Binding ListCurrency}"
-                 SelectedItem="{Binding SelectedCurrency}"
-                 IsSynchronizedWithCurrentItem="True">
+                              SelectedItem="{Binding SelectedCurrency}"
+                              IsSynchronizedWithCurrentItem="True">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
@@ -66,45 +69,103 @@
                 </GroupBox>
                 <GroupBox Grid.Column="1"
                           Header="{DynamicResource ExchangeRate}">
-                    <TextBox IsReadOnly="True" Text="{Binding ExchangeRate}"></TextBox>
+                    <TextBox IsReadOnly="True"
+                             Text="{Binding ExchangeRate}"></TextBox>
                 </GroupBox>
             </Grid>
 
             <GroupBox Header="{DynamicResource UnitPrice}">
                 <TextBox Text="{Binding Price, TargetNullValue=''}">
                     <i:Interaction.Behaviors>
-                        <local:TextBoxInputBehavior InputMode="DecimalInput"/>
+                        <local:TextBoxInputBehavior InputMode="DecimalInput" />
                     </i:Interaction.Behaviors>
                 </TextBox>
             </GroupBox>
             <GroupBox Header="{DynamicResource TotalAmount_}">
-                <TextBox IsReadOnly="True" Text="{Binding Total, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <TextBox IsReadOnly="True"
+                         Text="{Binding Total, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </GroupBox>
             <GroupBox Header="{DynamicResource Description}">
                 <TextBox Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, TargetNullValue=''}"></TextBox>
             </GroupBox>
         </StackPanel>
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <ListView Margin="5" ItemsSource="{Binding ListProduct, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay}">
+        <ScrollViewer Grid.Column="1"
+                      VerticalScrollBarVisibility="Auto">
+            <ListView Margin="5"
+                      ItemsSource="{Binding ListProduct, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedItem="{Binding SelectedProduct, Mode=TwoWay}">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="HorizontalContentAlignment"
+                                Value="Stretch" />
                     </Style>
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="{DynamicResource Id}" DisplayMemberBinding="{Binding Id}"/>
-                        <GridViewColumn Header="{DynamicResource ProductCode}" DisplayMemberBinding="{Binding Code}"/>
-                        <GridViewColumn Header="{DynamicResource ProductName}" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="{DynamicResource Unit}" DisplayMemberBinding="{Binding Unit.Name}"/>
-                        <GridViewColumn Header="{DynamicResource Description}" DisplayMemberBinding="{Binding Description}"/>
+                        <GridViewColumn Header="{DynamicResource Id}"
+                                        DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="{DynamicResource ProductCode}"
+                                        DisplayMemberBinding="{Binding Code}" />
+                        <GridViewColumn Header="{DynamicResource ProductName}"
+                                        DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="{DynamicResource Unit}"
+                                        DisplayMemberBinding="{Binding Unit.Name}" />
+                        <GridViewColumn Header="{DynamicResource Description}"
+                                        DisplayMemberBinding="{Binding Description}" />
                     </GridView>
                 </ListView.View>
             </ListView>
         </ScrollViewer>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="{DynamicResource Confirm}" Command="{Binding ConfirmCommand}" Width="100px" Margin="5,5,5,5"/>
-            <Button Content="{DynamicResource Cancel}" Command="{Binding CancelCommand}" Width="100px" Margin="5,5,5,5"/>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Content="{DynamicResource Confirm}"
+                    Command="{Binding ConfirmCommand}"
+                    Width="100px"
+                    Margin="5,5,5,5" />
+            <Button Command="{Binding CancelCommand}"
+                    Width="100px"
+                    Margin="5,5,5,5"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Cursor="Hand">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background"
+                                Value="mintcream" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter Property="Background"
+                                        Value="mediumseagreen" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="80"
+                                Height="25"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Resources/cancel.png"
+                           Height="16"
+                           Width="16"
+                           Margin="0, 0, 5, 0" />
+                    <TextBlock Text="{DynamicResource Cancel}"
+                               VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>

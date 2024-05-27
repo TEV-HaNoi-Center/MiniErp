@@ -1,5 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:system="clr-namespace:System;assembly=mscorlib"   
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <system:String x:Key="Category">Danh mục</system:String>
     <system:String x:Key="ExchangeRates">Tỷ giá</system:String>
@@ -7,7 +7,7 @@
     <system:String x:Key="Customer">Khách hàng</system:String>
     <system:String x:Key="Provider">Nhà cung cấp</system:String>
     <system:String x:Key="Unit">Đơn vị tính</system:String>
-    
+
     <system:String x:Key="InventoryManagement">Quản lý kho</system:String>
     <system:String x:Key="InventoryIn">Nhập kho</system:String>
     <system:String x:Key="InventoryOut">Xuất kho</system:String>
@@ -17,7 +17,7 @@
     <system:String x:Key="Personnel">Nhân sự</system:String>
     <system:String x:Key="Timekeeping">Chấm công</system:String>
 
-    <system:String x:Key="Hello">Xin chào, </system:String>
+    <system:String x:Key="Hello">Xin chào,</system:String>
     <system:String x:Key="Logout">Đăng xuất</system:String>
     <system:String x:Key="Checkout">Chấm công link</system:String>
     <system:String x:Key="Id">Id</system:String>
@@ -33,7 +33,7 @@
     <system:String x:Key="Submit">Tiến hành chấm công</system:String>
     <system:String x:Key="Option">Tùy chọn</system:String>
     <system:String x:Key="Location">Vị trí</system:String>
-    
+
     <!--CURD-->
     <system:String x:Key="Add">Thêm</system:String>
     <system:String x:Key="Fix">Sửa</system:String>
@@ -43,7 +43,7 @@
     <system:String x:Key="CurrencyCode">Mã tiền tệ</system:String>
     <system:String x:Key="CurrencyName">Tên tiền tệ</system:String>
     <system:String x:Key="ConversionRate">Tỷ lệ quy đổi</system:String>
-    
+
     <!--Tai du lieu-->
     <system:String x:Key="LoadData">Tải dữ liệu</system:String>
 
@@ -166,5 +166,7 @@
 
     <!--Tính công-->
     <system:String x:Key="CalculateAttendance">Tính công</system:String>
+    <!--in-->
+    <system:String x:Key="Print">In</system:String>
 
 </ResourceDictionary>
