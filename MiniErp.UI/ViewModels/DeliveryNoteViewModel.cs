@@ -63,6 +63,7 @@ namespace MiniErp.UI.ViewModels
             _detailRepository = detailRepository;
             _repository = repository;
             Data = new DeliveryNote();
+            Date = DateTime.Now;
             _mainContentStore = mainContentStore;
             _customerRepository = IoC.ServiceProvider.GetRequiredService<IRepository<Customer>>();
             LoadDataSource();

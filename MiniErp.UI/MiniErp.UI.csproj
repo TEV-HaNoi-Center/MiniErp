@@ -19,6 +19,7 @@
     <None Remove="Resources\calculate.png" />
     <None Remove="Resources\cancel.png" />
     <None Remove="Resources\category-alt.png" />
+    <None Remove="Resources\confirm.png" />
     <None Remove="Resources\Customer.png" />
     <None Remove="Resources\delete.png" />
     <None Remove="Resources\employee-man.png" />
@@ -40,6 +41,7 @@
 
     <None Remove="Resources\process.png" />
     <None Remove="Resources\Product.png" />
+    <None Remove="Resources\save.png" />
     <None Remove="Resources\search.png" />
     <None Remove="Resources\TevLogo.png" />
     <None Remove="Resources\time-check.png" />
@@ -75,6 +77,7 @@
     <Resource Include="Resources\back_groud.png" />
     <Resource Include="Resources\calculate.png" />
     <Resource Include="Resources\cancel.png" />
+    <Resource Include="Resources\confirm.png" />
     <Resource Include="Resources\delete.png" />
     <Resource Include="Resources\en-flag (1).png" />
     <Resource Include="Resources\excel.png" />
@@ -84,6 +87,7 @@
     <Resource Include="Resources\key-icon.png" />
     <Resource Include="Resources\print.png" />
     <Resource Include="Resources\process.png" />
+    <Resource Include="Resources\save.png" />
     <Resource Include="Resources\search.png" />
     <Resource Include="Resources\TevLogo.png" />
     <Resource Include="Resources\bacterium.png" />

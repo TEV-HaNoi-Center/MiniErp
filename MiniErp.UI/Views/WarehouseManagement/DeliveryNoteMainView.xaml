@@ -57,7 +57,7 @@
             <GroupBox Header="{DynamicResource ExportDate}"
                       Grid.Column="1"
                       Grid.Row="1">
-                <DatePicker SelectedDate="{Binding Date, TargetNullValue={x:Static sys:DateTime.Now}, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></DatePicker>
+                <DatePicker SelectedDate="{Binding Date, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></DatePicker>
             </GroupBox>
             <GroupBox Header="{DynamicResource OrderNumber}"
                       Grid.Column="1"

@@ -280,7 +280,7 @@
                        FontSize="13"
                        FontWeight="Bold"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
+                       HorizontalAlignment="Left"
                        Content="{Binding currentTime}"
                        Grid.Column="0" />
                 <StackPanel Orientation="Horizontal"

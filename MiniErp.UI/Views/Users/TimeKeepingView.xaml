@@ -148,7 +148,7 @@
                                VerticalAlignment="Center" />
                 </StackPanel>
             </Button>
-            <Button Command="{Binding CalculationCommand}"
+            <!--<Button Command="{Binding CalculationCommand}"
                     Width="100px"
                     Margin="5,5,5,5"
                     BorderThickness="0"
@@ -189,7 +189,7 @@
                     <TextBlock Text="{DynamicResource CalculateAttendance}"
                                VerticalAlignment="Center" />
                 </StackPanel>
-            </Button>
+            </Button>-->
             <Button Command="{Binding ExportCommand}"
                     Width="100px"
                     Margin="5,5,5,5"
