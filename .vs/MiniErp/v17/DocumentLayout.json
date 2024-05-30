@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Workspace\\Software\\MiniErp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|d:\\workspace\\software\\minierp\\minierp.ui\\viewmodels\\currencyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|solutionrelative:minierp.ui\\viewmodels\\currencyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|D:\\Workspace\\Software\\MiniErp\\minierp.ui\\viewmodels\\selectdeliveryproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|solutionrelative:minierp.ui\\viewmodels\\selectdeliveryproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|D:\\Workspace\\Software\\MiniErp\\minierp.ui\\views\\warehousemanagement\\selectdeliveryproductview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|solutionrelative:minierp.ui\\views\\warehousemanagement\\selectdeliveryproductview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|D:\\Workspace\\Software\\MiniErp\\minierp.ui\\viewmodels\\selectreceiveproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|solutionrelative:minierp.ui\\viewmodels\\selectreceiveproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|D:\\Workspace\\Software\\MiniErp\\minierp.ui\\views\\warehousemanagement\\selectreceiveproductview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C36C8024-5A2D-4282-B408-D36FE8CF0ED4}|MiniErp.UI\\MiniErp.UI.csproj|solutionrelative:minierp.ui\\views\\warehousemanagement\\selectreceiveproductview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CurrencyViewModel.cs",
+              "DocumentMoniker": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\ViewModels\\CurrencyViewModel.cs",
+              "RelativeDocumentMoniker": "MiniErp.UI\\ViewModels\\CurrencyViewModel.cs",
+              "ToolTip": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\ViewModels\\CurrencyViewModel.cs",
+              "RelativeToolTip": "MiniErp.UI\\ViewModels\\CurrencyViewModel.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAuwF8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T11:35:59.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SelectDeliveryProductViewModel.cs",
+              "DocumentMoniker": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\ViewModels\\SelectDeliveryProductViewModel.cs",
+              "RelativeDocumentMoniker": "MiniErp.UI\\ViewModels\\SelectDeliveryProductViewModel.cs",
+              "ToolTip": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\ViewModels\\SelectDeliveryProductViewModel.cs",
+              "RelativeToolTip": "MiniErp.UI\\ViewModels\\SelectDeliveryProductViewModel.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAwFIAAACqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T11:35:00.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SelectReceiveProductViewModel.cs",
+              "DocumentMoniker": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\ViewModels\\SelectReceiveProductViewModel.cs",
+              "RelativeDocumentMoniker": "MiniErp.UI\\ViewModels\\SelectReceiveProductViewModel.cs",
+              "ToolTip": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\ViewModels\\SelectReceiveProductViewModel.cs",
+              "RelativeToolTip": "MiniErp.UI\\ViewModels\\SelectReceiveProductViewModel.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAA9wFMAAACqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T11:29:43.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SelectReceiveProductView.xaml",
+              "DocumentMoniker": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\Views\\WarehouseManagement\\SelectReceiveProductView.xaml",
+              "RelativeDocumentMoniker": "MiniErp.UI\\Views\\WarehouseManagement\\SelectReceiveProductView.xaml",
+              "ToolTip": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\Views\\WarehouseManagement\\SelectReceiveProductView.xaml",
+              "RelativeToolTip": "MiniErp.UI\\Views\\WarehouseManagement\\SelectReceiveProductView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T11:28:21.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SelectDeliveryProductView.xaml",
+              "DocumentMoniker": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\Views\\WarehouseManagement\\SelectDeliveryProductView.xaml",
+              "RelativeDocumentMoniker": "MiniErp.UI\\Views\\WarehouseManagement\\SelectDeliveryProductView.xaml",
+              "ToolTip": "D:\\Workspace\\Software\\MiniErp\\MiniErp.UI\\Views\\WarehouseManagement\\SelectDeliveryProductView.xaml",
+              "RelativeToolTip": "MiniErp.UI\\Views\\WarehouseManagement\\SelectDeliveryProductView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T11:28:20.401Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
